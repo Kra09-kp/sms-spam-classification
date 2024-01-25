@@ -6,7 +6,10 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 
 ps = PorterStemmer()
-
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
 def data_preprocess(text):
     # 1. lower case
