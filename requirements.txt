@@ -1,5 +1,5 @@
 streamlit
--r download_nltk_resources.py
 nltk
+nltk.downloader
 scikit-learn
 pandas
