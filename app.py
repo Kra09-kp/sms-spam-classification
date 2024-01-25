@@ -11,6 +11,11 @@ try:
 except LookupError:
     nltk.download('punkt')
 
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
 def data_preprocess(text):
     # 1. lower case
     text = text.lower()
